@@ -4,7 +4,7 @@
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "white",
-  "scope": "/",
+  "scope": "/bicycle/",
   "description": "App that shows types of bikes and their examples",
   "icons": [
     {
