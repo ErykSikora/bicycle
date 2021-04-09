@@ -1,7 +1,7 @@
 {
   "name": "Bicycle UEK App",
   "short_name": "Bicycle app",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "white",
   "scope": "/bicycle/",
