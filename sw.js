@@ -1,20 +1,14 @@
-var cacheName = "hello-pwa";
-var filesToCache = ["./"];
-
-/* Start the service worker and cache all of the app's content */
-self.addEventListener("install", function (e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      return cache.addAll(filesToCache);
-    })
+if ("serviceWorker" in navigator) {
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register("./sw.js").then(
+    function (registration) {
+      console.log("Service worker registration succeeded:", registration);
+    },
+    /*catch*/ function (error) {
+      console.log("Service worker registration failed:", error);
+    }
   );
-});
-
-/* Serve cached content when offline */
-self.addEventListener("fetch", function (e) {
-  e.respondWith(
-    caches.match(e.request).then(function (response) {
-      return response || fetch(e.request);
-    })
-  );
-});
+} else {
+  console.log("Service workers are not supported.");
+}
