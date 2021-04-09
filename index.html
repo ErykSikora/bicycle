@@ -16,7 +16,7 @@
   <body class="bg-light">
     <div class="jumbotron bg-primary">
       <div class="container text-white">
-        <h1 class="display-5">Rowery</h1>
+        <h1 class="display-5">Bicycle - Rowery UEK</h1>
         <p class="lead">Typy rowerów i ich przykłady</p>
       </div>
     </div>
@@ -96,21 +96,14 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      window.addEventListener('load', () => {
-        if (!('serviceWorker' in navigator)) {
-          // service workers not supported
-          return
-        }
+      window.onload = () => {
+        'use strict';
 
-        navigator.serviceWorker.register('/sw.js').then(
-          () => {
-            // registered!
-          },
-          err => {
-            console.error('SW registration failed!', err)
-          }
-        )
-      })
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                  .register('./sw.js');
+        }
+      }
     </script>
   </body>
 </html>

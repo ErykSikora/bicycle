@@ -30,5 +30,7 @@
     "src": "icon.png",
     "sizes": "192x192",
     "type": "image/png"
-  }]
+  }],
+  "lang": "pl-PL",
+  "theme_color": "white"
 }
