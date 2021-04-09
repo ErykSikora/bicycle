@@ -1,5 +1,5 @@
-var cacheName = "bicycle-uek";
-var filesToCache = ["/index.html"];
+var cacheName = "hello-pwa";
+var filesToCache = ["/"];
 
 /* Start the service worker and cache all of the app's content */
 self.addEventListener("install", function (e) {
