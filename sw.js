@@ -1,4 +1,4 @@
-navigator.serviceWorker.register("./sw.js", { scope: "/" }).then(
+navigator.serviceWorker.register("./sw.js").then(
   function (registration) {
     console.log("Service worker registration succeeded:", registration);
   },
