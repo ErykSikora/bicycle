@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="/manifest.json">
+    <title>Bicycle</title>
+  </head>
+  <body class="bg-light">
+    <div class="jumbotron bg-primary">
+      <div class="container text-white">
+        <h1 class="display-5">Rowery</h1>
+        <p class="lead">Typy rowerów i ich przykłady</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="text-center">Rower miejski</h2>
+          <img src="./Brosen_city_bicycle.jpg" alt="" class="img-thumbnail" />
+          <p>Rower przeznaczony do jazdy w mieście.</p>
+          <p>
+            Tradycyjny rower miejski, tak zwany holender, zbudowany jest
+            najczęściej na kołach 28-calowych (choć spotyka się również rowery z
+            kołami 26- i 27-calowymi), posiada giętą, szeroką kierownicę, krótką
+            ramę i szerokie siodełko umożliwiające jazdę w pozycji
+            wyprostowanej. Posiada on też zwykle lampki zasilane z dynama,
+            komplet błotników, osłonę na łańcuch, nóżkę, bagażnik tylny, czasem
+            osłonę tylnego koła czy koszyk.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center">Rower górski</h2>
+          <img
+            src="./1280px-Old_Colnago_bike.jpg"
+            alt=""
+            class="img-thumbnail"
+          />
+          <p>
+            Rowery, których przeznaczeniem jest jazda w terenie trudniejszym,
+            niż pozwalają na to rowery szosowe czy trekingowe, np. górskie
+            ścieżki, szlaki leśne, specjalne tory przeszkód.
+          </p>
+          <p>
+            W porównaniu do rowerów szosowych oraz trekkingowych, rowery MTB są
+            cięższe, ze względu na mającą gwarantować większą wytrzymałość
+            konstrukcję. Rowery górskie, celem poprawy przyczepności i
+            możliwości pokonania szybko i bezpiecznie wymagającego terenu (rock
+            gardeny, rampy) w rowerach profesjonalnych oraz komfortu jazdy w
+            rowerach amatorskich i turystycznych, bardzo często wyposaża się w
+            różnego rodzaju amortyzatory, które również mają istotny wpływ na
+            masę pojazdu. Amortyzatory instaluje się głównie w widelcu i ramie;
+            amortyzowane sztyce siodełka i mostki nie są popularne w rowerach
+            profesjonalnych, ale wciąż można je spotkać w rowerach turystycznych
+            i starszych rowerach profesjonalnych. W ostatnich czasach coraz
+            częściej używa się sztyc opuszczanych. Spotyka się je u zawodników
+            wyścigów XC.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center">Rower szosowy</h2>
+          <img
+            src="./Pinarello_Dogma_XC_Shimano_XTR_Custom_Bike_(16165258647).jpg"
+            alt=""
+            class="img-thumbnail"
+          />
+          <p>
+            Sportowy rower, dostosowywany przede wszystkim do jazdy na twardej
+            drodze.
+          </p>
+          <p>
+            Klasyczny układ napędowy składać się musi z zespołu zębatek
+            przednich napędzanych bezpośrednio za pomocą nóg przy pomocy korb i
+            pedałów. Zębatki przednie są połączone łańcuchem z zespołem zębatek
+            napędzających bezpośrednio tylne koło. Ograniczenia dotyczące
+            rozmiarów zębatek dotyczą młodszych kategorii wiekowych.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.addEventListener('load', () => {
+        if (!('serviceWorker' in navigator)) {
+          // service workers not supported
+          return
+        }
+
+        navigator.serviceWorker.register('/sw.js').then(
+          () => {
+            // registered!
+          },
+          err => {
+            console.error('SW registration failed!', err)
+          }
+        )
+      })
+    </script>
+  </body>
+</html>
