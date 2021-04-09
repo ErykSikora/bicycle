@@ -1,5 +1,5 @@
 var CACHE_NAME = "bicycle-cache";
-var urlsToCache = ["/", "/img"];
+var urlsToCache = ["."];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
